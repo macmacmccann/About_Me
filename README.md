@@ -101,3 +101,89 @@ A health app proposed by the HSE to offload patient health services and reduce s
 - **Network effects** — Drive participation with a community-first design
 - **Design Flow** — Natural navigation with logical movement through features
 - **Scalability mindset** — Structured backend to support expansion for future services
+
+---
+
+## ⭐ Featured Projects
+
+### 🖐️ Hand Gesture Desktop Control
+
+For users with limited mobility who need hands-free control, and for power users who want to manipulate windows without touching a mouse or keyboard.
+
+Real-time hand gesture recognition for Windows — Python/MediaPipe detects 7 gestures (fist, open hand, pointing, peace, pinky, swipe directions) and pipes them to a C# WinUI 3 app that maps them to 20+ desktop actions: window management, mouse control, volume, virtual desktops, copy/paste, and tiling operations. Cross-language named-pipe IPC with gesture stability logic (hold-to-fire, swipe cooldown, dominant-axis detection).
+
+**Systems thinking:** Real-time gesture recognition is inherently noisy — a single frame misclassification would trigger false actions. A 450ms hold-to-fire window filters transient gestures, while a 1.5s cooldown after swipes prevents action avalanches. The 12-frame deque for swipe detection with dominant-axis threshold tolerates natural hand jitter without sacrificing responsiveness. This trade-off between latency and accuracy is the defining design constraint.
+
+---
+
+### 📐 Tiling Window Manager
+
+For power users and developers who manage many open windows and want keyboard-driven spatial organization without reaching for the mouse.
+
+Auto-tiles application windows on the primary monitor with 4 layout modes (Stacked, Column, Grid, Master-Stack). Uses raw Win32 P/Invoke (SetWindowSubclass, SetWinEventHook, IVirtualDesktopManager) for real-time retiling, focus dimming, Alt+arrow navigation, and window swapping. Extracted into a standalone engine with zero UI coupling.
+
+**Systems thinking:** Tiling engines face a fundamental tension: retile eagerly (every create/move/close event) for responsiveness, or lazily for performance. This engine retiles eagerly but defers expensive SetWindowPos calls via subclassed window procedures rather than a global CBT hook — confining the performance impact to tiled windows only. The IVirtualDesktopManager integration further scopes operations to the current virtual desktop, preventing unnecessary work on desktops the user isn't viewing.
+
+---
+
+### ⌨️ Global Key Remapper
+
+For users with motor impairments who benefit from simplified key layouts, and for power users who want custom shortcuts beyond what applications expose.
+
+Full keyboard shortcut reprogramming engine — capture any modifier+letter combo and assign it to launch apps or trigger actions. Low-level WH_KEYBOARD_LL hook with a live on-screen keyboard overlay that color-codes every key in real-time (red = taken, green = free, orange = held). Built from scratch — no AutoHotkey dependency.
+
+**Systems thinking:** A global key remapper must intercept keystrokes before the target application sees them, but the on-screen overlay also needs to display key state without intercepting those same keystrokes. The solution: two independent WH_KEYBOARD_LL hooks — one for the hidden remapper engine, one for the overlay UI — with a shared KeyDictionary so the overlay can render state without competing for the input stream. Separating read (overlay) from write (remapper) at the hook level avoids a circular dependency deadlock.
+
+---
+
+### 🖱️ Keyboard-Driven Mouse (Mouseless)
+
+For users who cannot use a physical mouse due to motor impairment, and for power users who want to stay entirely on the keyboard during focused work.
+
+Drives the Windows cursor entirely from the keyboard at 60 FPS. Velocity/friction physics model: short taps make pixel-precise steps, holding produces smooth gliding — no jittery key-repeat stutter. Three speed presets. Separate WH_KEYBOARD_LL hook + System.Threading.Timer at 16ms intervals.
+
+**Systems thinking:** Naive keyboard mouse control uses key-repeat rate — hold an arrow key and the OS repeats the key at ~30Hz with a 500ms initial delay, creating jerky, unpredictable cursor movement. Instead, this builds a velocity accumulator: key-down adds acceleration, key-up applies friction damping. The 16ms timer polls not the key state (which would miss rapid taps) but the velocity vector, which smoothly integrates all input. The result feels like analog control from a digital input — the same principle behind game controller thumbstick emulation.
+
+---
+
+### 👁️ Eyesight Color Filter Overlay
+
+For users with visual impairments — dyslexia (yellow filter improves contrast), light sensitivity (blue-light reduction), migraine (FL-41 rose tints reduce photophobia), and general screen brightness sensitivity.
+
+Full-screen accessibility overlay with 5 visual filter modes (Dim Screen, Dyslexia warm-yellow, Light Sensitive blue-block, Migraine FL-41 rose, Fire animated). Click-through WS_EX_LAYERED | WS_EX_TRANSPARENT window with LWA_ALPHA compositing. 3 strength levels. Smart Assistant integration for timed activation.
+
+**Systems thinking:** An overlay must be invisible to the user's interactions — click-through, never stealing focus, never registering input. WS_EX_TRANSPARENT alone doesn't guarantee this in Win32; the window must also not appear in EnumWindows results for certain operations. Using WS_EX_LAYERED with LWA_ALPHA separates visual compositing from input routing entirely. The 3 strength levels aren't linear — Dim Screen adjusts a continuous alpha while color modes blend a second layered bitmap — because a brightness slider and a color intensity slider are physically different operations that happen to share a UI control.
+
+---
+
+### 📋 Commands Snippet Palette
+
+For developers and terminal-heavy power users who want instant access to git/dotnet/npm/PS commands without memorizing syntax or leaving their flow.
+
+Speed-launcher overlay (Ctrl+Alt+O) with searchable git/dotnet/npm/PS snippets. Copies to clipboard with optional auto-paste via keybd_event. Usage tracking with dynamic "most used" sorting and numeric shortcuts with 400ms digit-buffer timer.
+
+**Systems thinking:** The digit-buffer timer exemplifies a design choice between responsiveness and ambiguity. When the user presses [1], the system must wait — how long? — to distinguish between "select command 1" and the start of "12". A 400ms buffer captures quick double-digits while feeling instant for single-digit selections. The auto-paste feature via keybd_event raises a deeper trade-off: it assumes the clipboard is yours to overwrite. Saving and restoring clipboard contents around the paste would protect the user but introduces race conditions with other clipboard-writing apps. This feature opted for speed over safety, with a clear toggle to disable auto-paste entirely.
+
+---
+
+## 🧩 Smaller Projects
+
+### 🤖 Smart Assistant
+Timed automation engine that schedules accessibility feature activation on configurable rules with EnumWindows-based window counting. Useful for users who want features to activate automatically (e.g., Dim Screen at sunset).
+
+**Systems thinking:** The 60-second polling interval balances battery life against responsiveness. A once-per-day guard per rule prevents re-firing — notable because DateTime.Date comparison fails if the app runs across midnight while the timer is sleeping.
+
+### ☁️ Supabase Roaming Settings
+Cross-device settings sync with auth (signup/login). Useful for users who work on multiple machines.
+
+**Systems thinking:** Roaming settings sound simple but introduce conflict resolution — last-write-wins is naive but acceptable for boolean toggles where concurrent modification is unlikely. The coupling is one-directional: cloud → local on login, local → cloud on toggle change, with no merge logic, because accessibility settings are personal preferences, not collaborative documents.
+
+### 🔗 Central Hotkey Hub
+Dispatches 15 global hotkeys to feature toggles via Win32 message pump. Useful as the architectural backbone ensuring features don't fight for hotkey real estate.
+
+**Systems thinking:** Centralizing all RegisterHotKey calls in one HWND avoids ID collisions between features. The 1000/2000 range convention isn't cosmetic — RegisterHotKey uses atomic IDs, and without namespacing, two features requesting the same ID silently fails.
+
+### 🔦 Spotlight Dark Overlay
+Cursor-following spotlight with circular reveal. Useful for users with visual attention difficulties who struggle to track the cursor on cluttered screens.
+
+**Systems thinking:** The spotlight follows via PointerMoved — polling cursor position would work but adds latency. The circular reveal region is an inverted mask: a dark overlay with a transparent ellipse punched out, which is trivially achieved in XAML via Clip geometry but requires the overlay to be a sibling, not parent, of the spotlight layer in the visual tree.
