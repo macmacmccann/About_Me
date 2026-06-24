@@ -108,6 +108,10 @@ A health app proposed by the HSE to offload patient health services and reduce s
 
 ### 🖐️ Hand Gesture Desktop Control
 
+<p align="center">
+  <img src="static/gesture.gif" alt="Hand Gesture Desktop Control demo" width="100%"/>
+</p>
+
 For users with limited mobility who need hands-free control, and for power users who want to manipulate windows without touching a mouse or keyboard.
 
 Real-time hand gesture recognition for Windows — Python/MediaPipe detects 7 gestures (fist, open hand, pointing, peace, pinky, swipe directions) and pipes them to a C# WinUI 3 app that maps them to 20+ desktop actions: window management, mouse control, volume, virtual desktops, copy/paste, and tiling operations. Cross-language named-pipe IPC with gesture stability logic (hold-to-fire, swipe cooldown, dominant-axis detection).
@@ -117,6 +121,10 @@ Real-time hand gesture recognition for Windows — Python/MediaPipe detects 7 ge
 ---
 
 ### 📐 Tiling Window Manager
+
+<p align="center">
+  <img src="static/tilingmanager.png" alt="Tiling Window Manager demo" width="100%"/>
+</p>
 
 For power users and developers who manage many open windows and want keyboard-driven spatial organization without reaching for the mouse.
 
@@ -129,7 +137,7 @@ Auto-tiles application windows on the primary monitor with 4 layout modes (Stack
 ### ⌨️ Global Key Remapper
 
 <p align="center">
-  <img src="static/keyremapper.gif" alt="Global Key Remapper demo" width="400"/>
+  <img src="static/keyremapper.gif" alt="Global Key Remapper demo" width="100%"/>
 </p>
 
 For users with motor impairments who benefit from simplified key layouts, and for power users who want custom shortcuts beyond what applications expose.
@@ -143,7 +151,7 @@ Full keyboard shortcut reprogramming engine — capture any modifier+letter comb
 ### 🖱️ Keyboard-Driven Mouse (Mouseless)
 
 <p align="center">
-  <img src="static/mouseless.gif" alt="Keyboard-Driven Mouse demo" width="400"/>
+  <img src="static/mouseless.gif" alt="Keyboard-Driven Mouse demo" width="100%"/>
 </p>
 
 For users who cannot use a physical mouse due to motor impairment, and for power users who want to stay entirely on the keyboard during focused work.
@@ -171,6 +179,22 @@ For developers and terminal-heavy power users who want instant access to git/dot
 Speed-launcher overlay (Ctrl+Alt+O) with searchable git/dotnet/npm/PS snippets. Copies to clipboard with optional auto-paste via keybd_event. Usage tracking with dynamic "most used" sorting and numeric shortcuts with 400ms digit-buffer timer.
 
 **Systems thinking:** The digit-buffer timer exemplifies a design choice between responsiveness and ambiguity. When the user presses [1], the system must wait — how long? — to distinguish between "select command 1" and the start of "12". A 400ms buffer captures quick double-digits while feeling instant for single-digit selections. The auto-paste feature via keybd_event raises a deeper trade-off: it assumes the clipboard is yours to overwrite. Saving and restoring clipboard contents around the paste would protect the user but introduces race conditions with other clipboard-writing apps. This feature opted for speed over safety, with a clear toggle to disable auto-paste entirely.
+
+---
+
+### 🌐 ASP.NET Core Web API — College Assignment A1 Grade 
+
+<p align="center">
+  <img src="static/aspcore_api.png" alt="ASP.NET Core API project" width="100%"/>
+</p>
+
+Built and deployed a RESTful API from scratch using ASP.NET Core with a code-first EF Core approach, one-to-many relationships, full CRUD + search across three tables (Ingredients, Meals, Plans), and internationalisation (Irish + Spanish). Consumed by a Java Android client via Retrofit.
+
+**Tech:** C#, ASP.NET Core 8, Azure App Service, Azure SQL, Entity Framework Core, GitHub Actions CI/CD, API Management, Retrofit
+
+**Deployment:** Azure App Service with an Azure SQL database. CI/CD via GitHub Actions — builds, publishes, deploys, and imports the OpenAPI spec into API Management on every push. Security via environment variables and SQL authentication.
+
+**Android Client:** Java app with modular `*Api` classes (e.g. `IngredientsApi`) and central `RetrofitClient`. Navigation, forms, search/filter, and internationalisation tested with Espresso on physical devices.
 
 ---
 
