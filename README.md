@@ -128,6 +128,10 @@ Auto-tiles application windows on the primary monitor with 4 layout modes (Stack
 
 ### ⌨️ Global Key Remapper
 
+<p align="center">
+  <img src="static/keyremapper.gif" alt="Global Key Remapper demo" width="400"/>
+</p>
+
 For users with motor impairments who benefit from simplified key layouts, and for power users who want custom shortcuts beyond what applications expose.
 
 Full keyboard shortcut reprogramming engine — capture any modifier+letter combo and assign it to launch apps or trigger actions. Low-level WH_KEYBOARD_LL hook with a live on-screen keyboard overlay that color-codes every key in real-time (red = taken, green = free, orange = held). Built from scratch — no AutoHotkey dependency.
@@ -137,6 +141,10 @@ Full keyboard shortcut reprogramming engine — capture any modifier+letter comb
 ---
 
 ### 🖱️ Keyboard-Driven Mouse (Mouseless)
+
+<p align="center">
+  <img src="static/mouseless.gif" alt="Keyboard-Driven Mouse demo" width="400"/>
+</p>
 
 For users who cannot use a physical mouse due to motor impairment, and for power users who want to stay entirely on the keyboard during focused work.
 
