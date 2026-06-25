@@ -190,9 +190,12 @@ Drives the Windows cursor entirely from the keyboard at 60 FPS. Velocity/frictio
 
 ---
 
-### 🔗 Central Hotkey Hub
+### 🔗 Hotkey Brain
 
-Dispatches infinite global hotkeys to feature toggles via Win32 message pump. Useful as the architectural backbone ensuring features don't fight for hotkey real estate.
+For developers , project managers, poer usrs : to streamline workflow and access to relevant processes. 
+
+Dispatches infinite global hotkeys for chosen hooksvia Win32 message pump. Useful as the architectural backbone ensuring features don't fight for hotkey real estate.
+Applied algorithm 
 
 **Systems thinking:** Centralizing all RegisterHotKey calls in one HWND avoids ID collisions between features. The 1000/2000 range convention isn't cosmetic — RegisterHotKey uses atomic IDs, and without namespacing, two features requesting the same ID silently fails.
 
