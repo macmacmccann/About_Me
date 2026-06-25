@@ -69,9 +69,11 @@ I separate product relevance between *interesting*, *useful* and *meaningful*. M
 
 A health app proposed by the HSE in competition with other groups. Our mission was to design an app that could offload patient health services and reduce staff burden. Won the hackathon.
 
-- **Team Lead:** Presented winning demo to panel, ensured delivery through sprints and communication channels. Followed iterative development practices.
-- **Backend Developer:** Created role-based access control, designed relational model, and managed deployment on Azure.
-- **Frontend Developer:** Implemented rule-based AI view layer for context-aware user responses.
+**Team Lead** — Presented winning demo to panel, ensured delivery through sprints and communication channels. Followed iterative development practices.
+
+**Backend Developer** — Created role-based access control, designed relational model, and managed deployment on Azure.
+
+**Frontend Developer** — Implemented rule-based AI view layer for context-aware user responses.
 
 ---
 
@@ -86,9 +88,11 @@ A health app proposed by the HSE in competition with other groups. Our mission w
 
 Created an Android application that consumes a custom API for managing dietary needs based on health concerns.
 
-- **Backend Developer:** Built the API using a code-first approach with Entity Framework Core, deployed to Azure SQL in a logical container.
-- **Frontend Developer:** Secondary role building the Java Android app to consume the API via Retrofit.
-- **Project Supervisor:** Managed deployment environments, enforced testing through the CI/CD pipeline.
+**Backend Developer** — Built the API using a code-first approach with Entity Framework Core, deployed to Azure SQL in a logical container.
+
+**Frontend Developer** — Built the Java Android app to consume the API via Retrofit.
+
+**Project Supervisor** — Managed deployment environments, enforced testing through the CI/CD pipeline.
 
 ---
 
@@ -99,8 +103,9 @@ Created an Android application that consumes a custom API for managing dietary n
 
 Medical health application for administrators to manage their workspace — including inventory, prescription records, authentication, database migration, and URL routing.
 
-- **Backend Developer:** Designed the relational model based on requirements and implemented it in SQLite before migrating to Azure for deployment. Built a clear separation of concerns in the database matching the frontend — administrators have different data privileges based on role.
-- **Project Supervisor:** Ensured team members hit sprint deadlines by communicating across multiple channels. Managed blockers as they arose. Maintained documentation and iterative development records throughout.
+**Backend Developer** — Designed the relational model based on requirements and implemented it in SQLite before migrating to Azure for deployment. Built a clear separation of concerns in the database matching the frontend — administrators have different data privileges based on role.
+
+**Project Supervisor** — Ensured team members hit sprint deadlines by communicating across multiple channels. Managed blockers as they arose and maintained documentation throughout.
 
 ---
 
