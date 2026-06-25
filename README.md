@@ -175,13 +175,15 @@ Real-time hand gesture recognition for Windows — Python/MediaPipe detects 7 ge
 
 ---
 
-### 📐 Tiling Window Manager
+### 📐 Native Tiling Window Manager
+
+For professionals and power users to automate organisation high workload.
+Navigate through the OS with a faster and  more tactile experience using keyboard-driven spatial organization. 
 
 <p align="center">
-  <img src="static/tilingmanager.png" alt="Tiling Window Manager demo" width="100%"/>
+  <img src="static/Tiling.gif" alt="Tiling Window Manager demo" width="100%"/>
 </p>
 
-For power users and developers who manage many open windows and want keyboard-driven spatial organization without reaching for the mouse.
 
 Auto-tiles application windows on the primary monitor with 4 layout modes (Stacked, Column, Grid, Master-Stack). Uses raw Win32 P/Invoke (SetWindowSubclass, SetWinEventHook, IVirtualDesktopManager) for real-time retiling, focus dimming, Alt+arrow navigation, and window swapping. Extracted into a standalone engine with zero UI coupling.
 
