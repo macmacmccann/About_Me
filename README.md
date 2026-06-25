@@ -24,27 +24,43 @@ I separate product relevance between *interesting*, *useful* and *meaningful*. M
 
 ## 💼 Experience
 
-### Project 1 — [Project Name]
-**Role:** [Your Role]
-**Tech:** [Technologies Used]
+### Group Project 1 — HSE Health App (Hackathon Winner) — 2025
 
-[Brief description of the project purpose and your contribution.]
+**Role:** Presenter | Systems Thinker | Backend Developer | Team Lead
+**Tech:** Django | Azure | Selenium | Python | SQLite
+
+A health app proposed by the HSE in competition with other groups. Our mission was to design an app that could offload patient health services and reduce staff burden. Won the hackathon.
+
+- **Team Lead:** Presented winning demo to panel, ensured delivery through sprints and communication channels. Followed iterative development practices.
+- **Systems Thinker:** Applied gamification and reinforcement theory to drive engagement and reduce staff burden.
+- **Backend Developer:** Created role-based access control for secure data management, deployed on Azure.
+- **Database Engineer:** Designed relational model, managed database, connected to UI.
+- **Frontend Developer:** Implemented rule-based AI view layer for context-aware user responses.
 
 ---
 
-### Project 2 — [Project Name]
-**Role:** [Your Role]
-**Tech:** [Technologies Used]
+### Group Project 2 — Health Assistant (A1 Grade) — 2026
 
-[Brief description of the project purpose and your contribution.]
+**Role:** Backend Developer | Project Supervisor | Android Developer | UI/UX Developer
+**Tech:** ASP.NET Core 8 | C# | Android (Java) | Azure SQL | Entity Framework Core | GitHub Actions
+
+Created an Android application that consumes a custom API for managing dietary needs based on health concerns.
+
+- **Backend Developer:** Built the API using a code-first approach with Entity Framework Core, deployed to Azure SQL in a logical container.
+- **Frontend Developer:** Secondary role building the Java Android app to consume the API via Retrofit.
+- **Project Supervisor:** Managed deployment environments, enforced testing through the CI/CD pipeline.
 
 ---
 
-### Project 3 — [Project Name]
-**Role:** [Your Role]
-**Tech:** [Technologies Used]
+### Group Project 3 — MedHealth
 
-[Brief description of the project purpose and your contribution.]
+**Role:** Project Supervisor | Backend Developer | Frontend Developer
+**Tech:** Django | Azure | Selenium | Python | SQLite
+
+Medical health application for administrators to manage their workspace — including inventory, prescription records, authentication, database migration, and URL routing.
+
+- **Backend Developer:** Designed the relational model based on requirements and implemented it in SQLite before migrating to Azure for deployment. Built a clear separation of concerns in the database matching the frontend — administrators have different data privileges based on role.
+- **Project Supervisor:** Ensured team members hit sprint deadlines by communicating across multiple channels. Managed blockers as they arose. Maintained documentation and iterative development records throughout.
 
 ---
 
@@ -226,7 +242,7 @@ Built and deployed a RESTful API from scratch using ASP.NET Core with a code-fir
 
 ---
 
-## 🧩 Smaller Projects
+## 🧩 Other Projects
 
 ### 🤖 Smart Assistant
 Timed automation engine that schedules accessibility feature activation on configurable rules with EnumWindows-based window counting. Useful for users who want features to activate automatically (e.g., Dim Screen at sunset).
