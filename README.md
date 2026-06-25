@@ -22,6 +22,47 @@ I separate product relevance between *interesting*, *useful* and *meaningful*. M
 
 ---
 
+
+
+## 🎓 Education
+
+### Technological University — BSc. in Computing (Software Development)
+**Honours** | 2023 – 2026 | 4 Years
+
+**Relevant Coursework:**
+- Advanced Algorithms in C++
+- Memory Management in C++
+- DevOps CI/CD Development with Agile Methodologies
+- Testing & Quality Assurance
+- Computational Theory
+- Amazon Web Services and API Management
+
+---
+
+## 🏆 Certifications
+
+| Certification | Issuer |
+|---|---|
+| Software Development – Distinction | Blackrock Institute |
+| Machine Learning | Nvidia |
+| System Administration | RedHat |
+| Amazon Web Services | AWS |
+
+---
+
+## 🛠️ Technical Skills
+
+| Category | Skills |
+|---|---|
+| **Languages** | C++, C#, Java, Python, Rust, JavaScript |
+| **Cloud & DevOps** | AWS, Azure, CI/CD, RedHat |
+| **ML Tools** | PyTorch, Colab |
+| **Databases** | SQL, MongoDB, Oracle, Supabase |
+| **Frameworks** | Django, Android Studio, FastAPI, Blazor, WinUI3, WPF |
+
+---
+
+
 ## 💼 Experience
 
 ### Group Project 1 — HSE Health App (Hackathon Winner) — 2025
@@ -69,45 +110,7 @@ Medical health application for administrators to manage their workspace — incl
 
 ---
 
-## 🎓 Education
-
-### Technological University — BSc. in Computing (Software Development)
-**Honours** | 2023 – 2026 | 4 Years
-
-**Relevant Coursework:**
-- Advanced Algorithms in C++
-- Memory Management in C++
-- DevOps CI/CD Development with Agile Methodologies
-- Testing & Quality Assurance
-- Computational Theory
-- Amazon Web Services and API Management
-
----
-
-## 🏆 Certifications
-
-| Certification | Issuer |
-|---|---|
-| Software Development – Distinction | Blackrock Institute |
-| Machine Learning | Nvidia |
-| System Administration | RedHat |
-| Amazon Web Services | AWS |
-
----
-
-## 🛠️ Technical Skills
-
-| Category | Skills |
-|---|---|
-| **Languages** | C++, C#, Java, Python, Rust, JavaScript |
-| **Cloud & DevOps** | AWS, Azure, CI/CD, RedHat |
-| **ML Tools** | PyTorch, Colab |
-| **Databases** | SQL, MongoDB, Oracle, Supabase |
-| **Frameworks** | Django, Android Studio, FastAPI, Blazor, WinUI3, WPF |
-
----
-
-## 📂 Projects & Experience
+## 📂 Projects
 
 ### 🖐️ Final Year Project: Ease Of Access
 *Technological University*
@@ -130,9 +133,6 @@ A native accessibility platform enabling hands-free navigation and workflow auto
 - **Complementary features** — Features work in tandem towards the same goal
 
 ---
-
-
-## ⭐ Featured Projects
 
 ### 🖐️ Hand Gesture Desktop Control
 
@@ -209,21 +209,6 @@ Speed-launcher overlay (Ctrl+Alt+O) with searchable git/dotnet/npm/PS snippets. 
 
 ---
 
-### 🌐 ASP.NET Core Web API — College Assignment A1 Grade 
-
-<p align="center">
-  <img src="static/aspcore_api.png" alt="ASP.NET Core API project" width="100%"/>
-</p>
-
-Built and deployed a RESTful API from scratch using ASP.NET Core with a code-first EF Core approach, one-to-many relationships, full CRUD + search across three tables (Ingredients, Meals, Plans), and internationalisation (Irish + Spanish). Consumed by a Java Android client via Retrofit.
-
-**Tech:** C#, ASP.NET Core 8, Azure App Service, Azure SQL, Entity Framework Core, GitHub Actions CI/CD, API Management, Retrofit
-
-**Deployment:** Azure App Service with an Azure SQL database. CI/CD via GitHub Actions — builds, publishes, deploys, and imports the OpenAPI spec into API Management on every push. Security via environment variables and SQL authentication.
-
-**Android Client:** Java app with modular `*Api` classes (e.g. `IngredientsApi`) and central `RetrofitClient`. Navigation, forms, search/filter, and internationalisation tested with Espresso on physical devices.
-
----
 
 ## 🧩 Other Projects
 
