@@ -64,8 +64,8 @@ I separate product relevance between *interesting*, *useful* and *meaningful*. M
 
 ### Group Project 1 — HSE Health App (Hackathon Winner) — 2025
 
-**Role:** Presenter | Backend Developer | Team Lead
-**Tech:** Django | Azure | Selenium | Python | SQLite
+**Role:** Presenter | Backend Developer | Team Lead  
+**Tech:** Django | Azure | Selenium | Python | SQLite  
 
 A health app proposed by the HSE in competition with other groups. Our mission was to design an app that could offload patient health services and reduce staff burden. Won the hackathon.
 
@@ -75,14 +75,14 @@ A health app proposed by the HSE in competition with other groups. Our mission w
 
 ---
 
-### Group Project 2 — Health Assistant (A1 Grade) — 2026
+### Group Project 2 — Health Assistant (A1 Grade) — 2026 
 
 <p align="center">
   <img src="static/aspcore_api.png" alt="ASP.NET Core API project" width="100%"/>
 </p>
 
-**Role:** Backend Developer | Project Supervisor | Android Developer | UI/UX Developer
-**Tech:** ASP.NET Core 8 | C# | Android (Java) | Azure SQL | Entity Framework Core | GitHub Actions
+**Role:** Backend Developer | Project Supervisor | Android Developer | UI/UX Developer  
+**Tech:** ASP.NET Core 8 | C# | Android (Java) | Azure SQL | Entity Framework Core | GitHub Actions  
 
 Created an Android application that consumes a custom API for managing dietary needs based on health concerns.
 
@@ -94,8 +94,8 @@ Created an Android application that consumes a custom API for managing dietary n
 
 ### Group Project 3 — MedHealth
 
-**Role:** Project Supervisor | Backend Developer | Frontend Developer
-**Tech:** Django | Azure | Selenium | Python | SQLite
+**Role:** Project Supervisor | Backend Developer | Frontend Developer  
+**Tech:** Django | Azure | Selenium | Python | SQLite  
 
 Medical health application for administrators to manage their workspace — including inventory, prescription records, authentication, database migration, and URL routing.
 
