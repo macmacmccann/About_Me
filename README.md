@@ -41,6 +41,11 @@ A health app proposed by the HSE in competition with other groups. Our mission w
 
 ### Group Project 2 — Health Assistant (A1 Grade) — 2026
 
+<p align="center">
+  <img src="static/aspcore_api.png" alt="ASP.NET Core API project" width="100%"/>
+</p>
+
+
 **Role:** Backend Developer | Project Supervisor | Android Developer | UI/UX Developer
 **Tech:** ASP.NET Core 8 | C# | Android (Java) | Azure SQL | Entity Framework Core | GitHub Actions
 
@@ -126,27 +131,6 @@ A native accessibility platform enabling hands-free navigation and workflow auto
 
 ---
 
-### 🏥 Hackathon Winner: HSE Health App
-*Technological University*
-
-A health app proposed by the HSE to offload patient health services and reduce staff burden.
-
-**Tech:** Django, SQLite, Azure, AWS, Python, Bash
-
-**Core Design:**
-- Built a secure patient management system with full CRUD functionality
-- Created role-based access control mechanisms for secure data management
-- Conducted thorough testing in deployment pipelines for reliability
-- Designed optimized relational models to ensure data integrity
-- Implemented rule-based AI view layer for user data for context-aware response
-
-**Systems Thinking:**
-- **Reinforcing engagement system** — Integrated positive feedback loops to encourage consistent patient use
-- **Network effects** — Drive participation with a community-first design
-- **Design Flow** — Natural navigation with logical movement through features
-- **Scalability mindset** — Structured backend to support expansion for future services
-
----
 
 ## ⭐ Featured Projects
 
@@ -206,17 +190,16 @@ Drives the Windows cursor entirely from the keyboard at 60 FPS. Velocity/frictio
 
 ---
 
-### 👁️ Eyesight Color Filter Overlay
+### 🔗 Central Hotkey Hub
 
-For users with visual impairments — dyslexia (yellow filter improves contrast), light sensitivity (blue-light reduction), migraine (FL-41 rose tints reduce photophobia), and general screen brightness sensitivity.
+Dispatches infinite global hotkeys to feature toggles via Win32 message pump. Useful as the architectural backbone ensuring features don't fight for hotkey real estate.
 
-Full-screen accessibility overlay with 5 visual filter modes (Dim Screen, Dyslexia warm-yellow, Light Sensitive blue-block, Migraine FL-41 rose, Fire animated). Click-through WS_EX_LAYERED | WS_EX_TRANSPARENT window with LWA_ALPHA compositing. 3 strength levels. Smart Assistant integration for timed activation.
-
-**Systems thinking:** An overlay must be invisible to the user's interactions — click-through, never stealing focus, never registering input. WS_EX_TRANSPARENT alone doesn't guarantee this in Win32; the window must also not appear in EnumWindows results for certain operations. Using WS_EX_LAYERED with LWA_ALPHA separates visual compositing from input routing entirely. The 3 strength levels aren't linear — Dim Screen adjusts a continuous alpha while color modes blend a second layered bitmap — because a brightness slider and a color intensity slider are physically different operations that happen to share a UI control.
+**Systems thinking:** Centralizing all RegisterHotKey calls in one HWND avoids ID collisions between features. The 1000/2000 range convention isn't cosmetic — RegisterHotKey uses atomic IDs, and without namespacing, two features requesting the same ID silently fails.
 
 ---
 
-### 📋 Commands Snippet Palette
+
+### 📋 Quick assistive global tool windows on command 
 
 For developers and terminal-heavy power users who want instant access to git/dotnet/npm/PS commands without memorizing syntax or leaving their flow.
 
@@ -245,17 +228,17 @@ Built and deployed a RESTful API from scratch using ASP.NET Core with a code-fir
 ## 🧩 Other Projects
 
 ### 🤖 Smart Assistant
+
 Timed automation engine that schedules accessibility feature activation on configurable rules with EnumWindows-based window counting. Useful for users who want features to activate automatically (e.g., Dim Screen at sunset).
 
 **Systems thinking:** The 60-second polling interval balances battery life against responsiveness. A once-per-day guard per rule prevents re-firing — notable because DateTime.Date comparison fails if the app runs across midnight while the timer is sleeping.
 
-### ☁️ Supabase Roaming Settings
-Cross-device settings sync with auth (signup/login). Useful for users who work on multiple machines.
+### 👁️ Eyesight Color Filter Overlay
 
-**Systems thinking:** Roaming settings sound simple but introduce conflict resolution — last-write-wins is naive but acceptable for boolean toggles where concurrent modification is unlikely. The coupling is one-directional: cloud → local on login, local → cloud on toggle change, with no merge logic, because accessibility settings are personal preferences, not collaborative documents.
+For users with visual impairments — dyslexia (yellow filter improves contrast), light sensitivity (blue-light reduction), migraine (FL-41 rose tints reduce photophobia), and general screen brightness sensitivity.
+Smart Assistant integration for timed activation.
 
-### 🔗 Central Hotkey Hub
-Dispatches 15 global hotkeys to feature toggles via Win32 message pump. Useful as the architectural backbone ensuring features don't fight for hotkey real estate.
+**Systems thinking:** An overlay must be invisible to the user's interactions — click-through, never stealing focus, never registering input. The 3 strength levels aren't linear — Dim Screen adjusts a continuous alpha while color modes blend a second layered bitmap — because a brightness slider and a color intensity slider are physically different operations that happen to share a UI control.
 
-**Systems thinking:** Centralizing all RegisterHotKey calls in one HWND avoids ID collisions between features. The 1000/2000 range convention isn't cosmetic — RegisterHotKey uses atomic IDs, and without namespacing, two features requesting the same ID silently fails.
+
 
