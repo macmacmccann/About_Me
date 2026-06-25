@@ -123,6 +123,11 @@ Medical health application for administrators to manage their workspace — incl
 ## 📂 Projects
 
 ### 🖐️ Final Year Project: Ease Of Access
+
+<p align="center">
+  <img src="static/easeofaccess.PNG" alt="Ease Of Access" width="100%"/>
+</p>
+
 *Technological University*
 
 A native accessibility platform enabling hands-free navigation and workflow automation for users with motor impairments.
