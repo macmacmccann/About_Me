@@ -4,6 +4,10 @@
 
 **Software Development Graduate**
 
+<p align="center">
+  <img src="static/MarkMcCann.jpeg" alt="Mark McCann" width="150" style="border-radius: 50%;"/>
+</p>
+
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/markmccann123/)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:markmccann98@outlook.com)
 [![Phone](https://img.shields.io/badge/Phone-0851003044-25D366?style=for-the-badge&logo=phone&logoColor=white)](tel:+353851003044)
@@ -25,6 +29,11 @@ I separate product relevance between *interesting*, *useful* and *meaningful*. M
 ## 🎓 Education
 
 ### Technological University — BSc. in Computing (Software Development)
+
+<p align="center">
+  <img src="static/collegepicture.jpg" alt="Technological University" width="100%"/>
+</p>
+
 **Honours** | 2023 – 2026 | 4 Years
 
 **Relevant Coursework:**
@@ -63,6 +72,10 @@ I separate product relevance between *interesting*, *useful* and *meaningful*. M
 ## 💼 Experience
 
 ### Group Project 1 — HSE Health App (Hackathon Winner) — 2025
+
+<p align="center">
+  <img src="static/hsehealth.PNG" alt="HSE Health App" width="100%"/>
+</p>
 
 **Role:** Presenter | Backend Developer | Team Lead  
 **Tech:** Django | Azure | Selenium | Python | SQLite  
