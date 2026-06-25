@@ -237,15 +237,13 @@ Speed-launcher overlay (Ctrl+Alt+O) with searchable git/dotnet/npm/PS snippets. 
 
 ## 🧩 Other Projects
 
+### 📟 TerminalBrain
+
+Bash/Linux terminal tool for instantly retrieving files, directories, and commands without leaving the command line.
+
 ### 🤖 Smart Assistant
 
-Timed automation engine that schedules accessibility feature activation on configurable rules with EnumWindows-based window counting. Useful for users who want features to activate automatically (e.g., Dim Screen at sunset).
+Timed automation engine with usage tracking that schedules accessibility features and offers personalised suggestions for power users. Uses EnumWindows-based window counting to activate features automatically (e.g., Dim Screen at sunset).
 
 **Systems thinking:** The 60-second polling interval balances battery life against responsiveness. A once-per-day guard per rule prevents re-firing — notable because DateTime.Date comparison fails if the app runs across midnight while the timer is sleeping.
 
-### 👁️ Eyesight Color Filter Overlay
-
-For users with visual impairments — dyslexia (yellow filter improves contrast), light sensitivity (blue-light reduction), migraine (FL-41 rose tints reduce photophobia), and general screen brightness sensitivity.
-Smart Assistant integration for timed activation.
-
-**Systems thinking:** An overlay must be invisible to the user's interactions — click-through, never stealing focus, never registering input. The 3 strength levels aren't linear — Dim Screen adjusts a continuous alpha while color modes blend a second layered bitmap — because a brightness slider and a color intensity slider are physically different operations that happen to share a UI control.
