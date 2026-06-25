@@ -48,6 +48,10 @@ I separate product relevance between *interesting*, *useful* and *meaningful*. M
 
 ### Blackrock Institute of Education — Software Development (Distinction Diploma)
 
+<p align="center">
+  <img src="static/bfei.png" alt="Technological University" width="100%"/>
+</p>
+
 Intensive foundation in object-oriented programming, application development, and software fundamentals — completed with distinction.
 
 **Distinction** | 2021 – 2022 | 1 Year
