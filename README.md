@@ -46,6 +46,14 @@ I separate product relevance between *interesting*, *useful* and *meaningful*. M
 
 ---
 
+### Blackrock Institute of Education — Software Development (Distinction Diploma)
+
+Intensive foundation in object-oriented programming, application development, and software fundamentals — completed with distinction.
+
+**Distinction** | 2021 – 2022 | 1 Year
+
+---
+
 ## 🏆 Certifications
 
 | Certification | Issuer |
