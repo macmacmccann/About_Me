@@ -73,9 +73,7 @@ I separate product relevance between *interesting*, *useful* and *meaningful*. M
 
 ### Group Project 1 — HSE Health App (Hackathon Winner) — 2025
 
-<p align="center">
-  <img src="static/hsehealth.PNG" alt="HSE Health App" width="100%"/>
-</p>
+<img src="static/hsehealth.PNG" alt="HSE Health App" width="180" style="float: left; margin-right: 20px; margin-bottom: 10px;"/>
 
 **Role:** Presenter | Backend Developer | Team Lead  
 **Tech:** Django | Azure | Selenium | Python | SQLite  
