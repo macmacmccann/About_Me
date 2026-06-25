@@ -18,6 +18,34 @@
 
 **BSc. Graduate in Computing (Software Development)** — graduating May 2026 with hands-on experience building scalable applications in teams using iterative development. Passionate about testing in all forms and systems thinking. Seeking a graduate role to apply these skills in real-world environments.
 
+I separate product relevance between *interesting*, *useful* and *meaningful*. My aim is to join the latter two into something that works with a demographic. Below is a list of projects demonstrating this — all built with correct practices: UAT, testing, iterative development, documentation. I gravitate towards supportive technologies with a focus on accessibility. Whether these are standalone apps or fused into one is a decision taken to serve the purpose of the user.
+
+---
+
+## 💼 Experience
+
+### Project 1 — [Project Name]
+**Role:** [Your Role]
+**Tech:** [Technologies Used]
+
+[Brief description of the project purpose and your contribution.]
+
+---
+
+### Project 2 — [Project Name]
+**Role:** [Your Role]
+**Tech:** [Technologies Used]
+
+[Brief description of the project purpose and your contribution.]
+
+---
+
+### Project 3 — [Project Name]
+**Role:** [Your Role]
+**Tech:** [Technologies Used]
+
+[Brief description of the project purpose and your contribution.]
+
 ---
 
 ## 🎓 Education
@@ -215,7 +243,3 @@ Dispatches 15 global hotkeys to feature toggles via Win32 message pump. Useful a
 
 **Systems thinking:** Centralizing all RegisterHotKey calls in one HWND avoids ID collisions between features. The 1000/2000 range convention isn't cosmetic — RegisterHotKey uses atomic IDs, and without namespacing, two features requesting the same ID silently fails.
 
-### 🔦 Spotlight Dark Overlay
-Cursor-following spotlight with circular reveal. Useful for users with visual attention difficulties who struggle to track the cursor on cluttered screens.
-
-**Systems thinking:** The spotlight follows via PointerMoved — polling cursor position would work but adds latency. The circular reveal region is an inverted mask: a dark overlay with a transparent ellipse punched out, which is trivially achieved in XAML via Clip geometry but requires the overlay to be a sibling, not parent, of the spotlight layer in the visual tree.
