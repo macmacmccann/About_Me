@@ -18,11 +18,9 @@
 
 **BSc. Graduate in Computing (Software Development)** — graduating May 2026 with hands-on experience building scalable applications in teams using iterative development. Passionate about testing in all forms and systems thinking. Seeking a graduate role to apply these skills in real-world environments.
 
-I separate product relevance between *interesting*, *useful* and *meaningful*. My aim is to join the latter two into something that works with a demographic. Below is a list of projects demonstrating this — all built with correct practices: UAT, testing, iterative development, documentation. I gravitate towards supportive technologies with a focus on accessibility. Whether these are standalone apps or fused into one is a decision taken to serve the purpose of the user.
+I separate product relevance between *interesting*, *useful* and *meaningful*. My aim is to join the latter two into something that works with a demographic. I gravitate towards supportive technologies with a focus on accessibility. Whether these are standalone apps or fused into one is a decision taken to serve the purpose of the user.
 
 ---
-
-
 
 ## 🎓 Education
 
@@ -62,20 +60,17 @@ I separate product relevance between *interesting*, *useful* and *meaningful*. M
 
 ---
 
-
 ## 💼 Experience
 
 ### Group Project 1 — HSE Health App (Hackathon Winner) — 2025
 
-**Role:** Presenter | Systems Thinker | Backend Developer | Team Lead
+**Role:** Presenter | Backend Developer | Team Lead
 **Tech:** Django | Azure | Selenium | Python | SQLite
 
 A health app proposed by the HSE in competition with other groups. Our mission was to design an app that could offload patient health services and reduce staff burden. Won the hackathon.
 
 - **Team Lead:** Presented winning demo to panel, ensured delivery through sprints and communication channels. Followed iterative development practices.
-- **Systems Thinker:** Applied gamification and reinforcement theory to drive engagement and reduce staff burden.
-- **Backend Developer:** Created role-based access control for secure data management, deployed on Azure.
-- **Database Engineer:** Designed relational model, managed database, connected to UI.
+- **Backend Developer:** Created role-based access control, designed relational model, and managed deployment on Azure.
 - **Frontend Developer:** Implemented rule-based AI view layer for context-aware user responses.
 
 ---
@@ -85,7 +80,6 @@ A health app proposed by the HSE in competition with other groups. Our mission w
 <p align="center">
   <img src="static/aspcore_api.png" alt="ASP.NET Core API project" width="100%"/>
 </p>
-
 
 **Role:** Backend Developer | Project Supervisor | Android Developer | UI/UX Developer
 **Tech:** ASP.NET Core 8 | C# | Android (Java) | Azure SQL | Entity Framework Core | GitHub Actions
@@ -134,7 +128,7 @@ A native accessibility platform enabling hands-free navigation and workflow auto
 
 ---
 
-### 🖐️ Hand Gesture Desktop Control
+### ✋ Hand Gesture Desktop Control
 
 <p align="center">
   <img src="static/gesture.gif" alt="Hand Gesture Desktop Control demo" width="100%"/>
@@ -190,19 +184,15 @@ Drives the Windows cursor entirely from the keyboard at 60 FPS. Velocity/frictio
 
 ---
 
-### 🔗 Hotkey Brain
+### 🔗 Central Hotkey Hub
 
-For developers , project managers, poer usrs : to streamline workflow and access to relevant processes. 
-
-Dispatches infinite global hotkeys for chosen hooksvia Win32 message pump. Useful as the architectural backbone ensuring features don't fight for hotkey real estate.
-Applied algorithm 
+Dispatches global hotkeys to feature toggles via a Win32 message pump, ensuring features don't fight for hotkey real estate. Useful as the architectural backbone for keyboard-driven tools.
 
 **Systems thinking:** Centralizing all RegisterHotKey calls in one HWND avoids ID collisions between features. The 1000/2000 range convention isn't cosmetic — RegisterHotKey uses atomic IDs, and without namespacing, two features requesting the same ID silently fails.
 
 ---
 
-
-### 📋 Quick assistive global tool windows on command 
+### 📋 Commands Snippet Palette
 
 For developers and terminal-heavy power users who want instant access to git/dotnet/npm/PS commands without memorizing syntax or leaving their flow.
 
@@ -211,7 +201,6 @@ Speed-launcher overlay (Ctrl+Alt+O) with searchable git/dotnet/npm/PS snippets. 
 **Systems thinking:** The digit-buffer timer exemplifies a design choice between responsiveness and ambiguity. When the user presses [1], the system must wait — how long? — to distinguish between "select command 1" and the start of "12". A 400ms buffer captures quick double-digits while feeling instant for single-digit selections. The auto-paste feature via keybd_event raises a deeper trade-off: it assumes the clipboard is yours to overwrite. Saving and restoring clipboard contents around the paste would protect the user but introduces race conditions with other clipboard-writing apps. This feature opted for speed over safety, with a clear toggle to disable auto-paste entirely.
 
 ---
-
 
 ## 🧩 Other Projects
 
@@ -227,6 +216,3 @@ For users with visual impairments — dyslexia (yellow filter improves contrast)
 Smart Assistant integration for timed activation.
 
 **Systems thinking:** An overlay must be invisible to the user's interactions — click-through, never stealing focus, never registering input. The 3 strength levels aren't linear — Dim Screen adjusts a continuous alpha while color modes blend a second layered bitmap — because a brightness slider and a color intensity slider are physically different operations that happen to share a UI control.
-
-
-
